@@ -1,5 +1,22 @@
 DockerFile:
-  --> simple teext file that consists of instructions to build docker images.
+  --> a simple text file that consists of instructions to build Docker images.
   --> Syntax:
           --> $ docker build -t[image name]:[tag]
           --> $ docker build -t centos-httpd:latest
+
+
+$vi dockerfile
+FROM tgagor/centos-stream
+MAINTAINER admin
+
+create a dockerFile:
+
+$ rm -rf docker/
+$ mkdir docker
+$ cd docker/
+$ ls
+
+FROM quary.io/centos/centos:latest
+RUN dnf -y install https unzip curl net-tools && \
+  dnf clean all
+
